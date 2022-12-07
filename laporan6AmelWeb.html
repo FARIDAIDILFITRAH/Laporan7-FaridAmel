@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Amel Krisandaresta</title>
+    <script>
+          function tampilkan() {
+            var nama = document.getElementById("form1").name.value;
+            var nim = document.getElementById("form1").nim.value;
+            var jk = document.getElementById("form1").jk.value;
+            var hobi = document.forms["form1"].elements["hobi"];
+            var desk = document.getElementById("form1").bio.value;
+            var om = document.getElementById("form1").OrientasiMinat.value;
+            var ok = document.getElementById("form1").OrientasiKemampuan.value;
+
+            var isihobi="";
+			for(i=0;i<hobi.length;i++){
+				if(hobi[i].checked==true){
+					isihobi  += "\n"+hobi[i].value;
+				}
+			}
+
+            alert(
+                "Nama : "+nama+
+                "\nNIM : "+nim+
+                "\nJenis Kelamin : "+jk+
+                "\nHobi : "+isihobi+
+                "\nDeskripsi Diri : "+desk+
+                "\nOrientasi Minat : "+om+
+                "\nOrientasi Kemampuan : "+ok
+                );
+          }
+    </script>
+  </head>
+  <body>
+    <h1 align="center">Data Diri</h1>
+    <form id="form1" name="form1" onsubmit="return false">
+      <table align="center" cellpadding="3">
+        <tr>
+          <td><label for="name">Nama </label></td>
+          <td>: <input type="text" id="name" /></td>
+        </tr>
+        <tr>
+          <td><label for="nim">NIM </label></td>
+          <td>: <input type="text" id="nim" /></td>
+        </tr>
+        <tr>
+          <td><label>Jenis Kelamin</label></td>
+          <td>:<input type="radio" id="pria" name="jk" value="Laki-Laki" /><label for="pria">Laki-Laki</label> <input type="radio" id="wan" name="jk" value="Perempuan" /><label for="wan">Perempuan</label></td>
+        </tr>
+        <tr>
+          <td><label>Hobi : </label></td>
+          <td><input type="checkbox" id="nonton" name="hobi" value="Menonton" /><label for="nonton">Menonton</label> <input type="checkbox" id="nyanyi" name="hobi" value="Menyanyi" /><label for="nyanyi">Menyanyi</label> <input type="checkbox" id="masak" name="hobi" value="Memasak" /><label for="masak">Memasak</label></td>
+        </tr>
+        <tr>
+          <td><label for="bio">Deskripsi Diri</label></td>
+          <td><textarea id="bio" cols="50" rows="10">Tuliskan deskripsi singkat tentang anda</textarea></td>
+        </tr>
+        <tr>
+          <td><label for="OrientasiMinat">Orientasi Minat</label></td>
+          <td>
+            :
+            <select id="OrientasiMinat">
+              <option>Desain Grafis</option>
+              <option>Programing Java</option>
+              <option>Sistem Analis</option>
+              <option>Dagelan Saja</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="OrientasiKemampuan">Orientasi Kemampuan</label></td>
+          <td>
+            :
+            <select id="OrientasiKemampuan">
+              <option>Desain Grafis</option>
+              <option>Programing Java</option>
+              <option>Sistem Analis</option>
+              <option>Ahli Jaringan</option>
+              <option>Trainer IT</option>
+              <option>Dagelan Saja</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button type="submit" onclick="tampilkan()">Tampikan</button>
+            <button type="reset">Reset</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
