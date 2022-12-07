@@ -1,0 +1,21 @@
+tulisan_miring {
+	font-family: Maiandra GD;
+	font-size: 16px;
+	font-style: italic;
+	color: red;
+}
+.cetakTebal{
+	font-family: Maiandra GD;
+	font-size: 16px;
+	font-weight: bold;
+	color: black;
+}
+#16pt{
+	font-size: 16px;
+	color: aqua;
+}
+body {
+	background-image: url('cg.gif');
+	background-repeat: no-repeat;
+	background-size: 1300px auto;
+}
